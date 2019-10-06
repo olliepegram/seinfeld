@@ -1,0 +1,73 @@
+.QuoteContainer {
+    min-height: 80vh;
+}
+
+.AllQuotes {
+    padding: 0;
+    margin: 5% 10% 0 10%;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    flex-flow: wrap row;
+    justify-content: space-around;
+}
+
+.SingleQuote {
+    /* background: #fcfcfc; */
+    /* border: 1px solid #8e54e9; */
+    padding: 30px;
+    width: 350px;
+    min-height: 150px;
+    margin-top: 10px;
+    color: #4e54c8;
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+    /* -webkit-box-shadow: 1px 0px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 0px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 1px 0px 20px 0px rgba(0, 0, 0, 0.75); */
+    -webkit-box-shadow: 0em 0.5em 0 0 #8e54e9, 0 0 0 1px #8e54e9 inset;
+    box-shadow: 0.5em 0.5em 0 0 #8e54e9, 0 0 0 1px #8e54e9 inset;
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+    position: relative;
+}
+
+.quote {
+    text-align: center;
+}
+
+.quote-about {
+    /* background: rgba(255, 147, 0, 0.6); */
+
+    /* -webkit-box-shadow: 0em 0.5em 0 0 #8e54e9, 0 0 0 0px #8e54e9 inset;
+    box-shadow: 0em 0.5em 0 0 #8e54e9, 0 0 0 0px #8e54e9 inset;
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px); */
+    color: #000;
+    bottom: 0;
+    left: 0px;
+    position: absolute;
+    width: 99.7%;
+    padding: 20px 0 20px 0;
+}
+
+.quote-season {
+    width: 50%;
+    height: 70%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.quote-episode {
+    height: 70%;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
