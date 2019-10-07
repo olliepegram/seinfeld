@@ -41,8 +41,8 @@ class App extends Component {
         };
         const color = randColor(this.props.colors);
         let quotes = [];
-
-        while (quotes.length < this.props.numQuotesToGet) {
+        let filteredQuotes = [];
+        while (filteredQuotes.length < this.props.numQuotesToGet) {
             let res = await axios.get(
                 'https://seinfeld-quotes.herokuapp.com/random'
             );
@@ -55,13 +55,21 @@ class App extends Component {
                 season: bulkQuote.season,
                 color: color()
             });
-            // const filteredQuotes = quotes.filter((item, index) => {
-
-            // })
+            filteredQuotes = quotes.filter((obj, pos, arr) => {
+                return (
+                    arr
+                        .map(mapObj => mapObj['author'])
+                        .indexOf(obj['author']) === pos
+                );
+            });
         }
-        this.setState({ quotes });
+        console.log(filteredQuotes);
+
+        this.setState({ quotes: filteredQuotes });
         this.setState({
-            pickedAuthor: this.state.quotes[Math.floor(Math.random() * 6)]
+            pickedAuthor: this.state.quotes[
+                Math.floor(Math.random() * this.state.quotes.length)
+            ]
         });
     }
 
