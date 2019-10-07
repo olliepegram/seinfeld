@@ -1,57 +1,70 @@
 import React, { Component } from 'react';
+import 'hover.css';
 import './Quotes.css';
 
 class Quotes extends Component {
-    randColor = array => {
-        var copy = array.slice(0);
-        return function() {
-            if (copy.length < 1) {
-                copy = array.slice(0);
-            }
-            var index = Math.floor(Math.random() * copy.length);
-            var item = copy[index];
-            copy.splice(index, 1);
-            return item;
-        };
-    };
+    listRef = React.createRef();
 
     render() {
-        const colors = this.randColor([
-            '#EEAF00',
-            '#01A7B7',
-            '#DE4B43',
-            '#FCA080',
-            '#FF7E57',
-            '#3C3642',
-            '#85496F',
-            '#5D9B84'
-        ]);
-        return (
-            <div className='QuoteContainer'>
-                <ul className='AllQuotes'>
-                    {this.props.quotes.map(quote => (
-                        <li
-                            key={quote.id}
-                            className='SingleQuote'
-                            style={{
-                                backgroundColor: colors()
-                            }}
-                            onClick={() => this.props.handleChoice(quote.id)}
-                        >
-                            <h3 className='quote'>{quote.quote}</h3>
-                            <div className='quote-about'>
-                                <span className='quote-season'>
-                                    Season: {quote.season}
-                                </span>
-                                <span className='quote-episode'>
-                                    Quote: {quote.episode}
-                                </span>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        );
+        if (this.props.gameWon) {
+            return (
+                <div className='QuoteContainer'>
+                    <ul className='AllQuotes'>
+                        {this.props.quotes.map(quote => (
+                            <li
+                                key={quote.id}
+                                className='SingleQuote'
+                                style={{
+                                    backgroundColor: this.props.author.color
+                                }}
+                            >
+                                <h3 className='quote'>
+                                    {this.props.author.quote}
+                                </h3>
+                                <div className='quote-about'>
+                                    <span className='quote-season'>
+                                        Season: {this.props.author.season}
+                                    </span>
+                                    <span className='quote-episode'>
+                                        Episode: {this.props.author.episode}
+                                    </span>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            );
+        } else if (this.props.gameWon === false) {
+            return (
+                <div className='QuoteContainer'>
+                    <ul className='AllQuotes'>
+                        {this.props.quotes.map(quote => (
+                            <li
+                                key={quote.id}
+                                className='SingleQuote hvr-float'
+                                style={{
+                                    backgroundColor: quote.color
+                                }}
+                                onClick={() =>
+                                    this.props.handleChoice(quote.id)
+                                }
+                                ref={this.listRef}
+                            >
+                                <h3 className='quote'>{quote.quote}</h3>
+                                <div className='quote-about'>
+                                    <span className='quote-season'>
+                                        Season: {quote.season}
+                                    </span>
+                                    <span className='quote-episode'>
+                                        Episode: {quote.episode}
+                                    </span>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            );
+        }
     }
 }
 

@@ -1,5 +1,11 @@
+.Author-wrap {
+    max-width: 350px;
+    margin: 70px auto 0 auto;
+}
+
 .PickedAuthor {
     text-align: center;
-    position: relative;
-    margin-top: 70px;
+    border-bottom: 7px solid #fed522;
+    width: auto;
+    font-size: 30px;
 }

@@ -8,7 +8,17 @@ import './App.css';
 
 class App extends Component {
     static defaultProps = {
-        numQuotesToGet: 6
+        numQuotesToGet: 6,
+        colors: [
+            '#EEAF00',
+            '#01A7B7',
+            '#DE4B43',
+            '#FCA080',
+            '#FF7E57',
+            '#3C3642',
+            '#85496F',
+            '#5D9B84'
+        ]
     };
     state = {
         quotes: [],
@@ -17,6 +27,19 @@ class App extends Component {
     };
 
     async componentDidMount() {
+        const randColor = array => {
+            var copy = array.slice(0);
+            return function() {
+                if (copy.length < 1) {
+                    copy = array.slice(0);
+                }
+                var index = Math.floor(Math.random() * copy.length);
+                var item = copy[index];
+                copy.splice(index, 1);
+                return item;
+            };
+        };
+        const color = randColor(this.props.colors);
         let quotes = [];
 
         while (quotes.length < this.props.numQuotesToGet) {
@@ -29,8 +52,12 @@ class App extends Component {
                 quote: bulkQuote.quote,
                 author: bulkQuote.author,
                 episode: bulkQuote.episode,
-                season: bulkQuote.season
+                season: bulkQuote.season,
+                color: color()
             });
+            // const filteredQuotes = quotes.filter((item, index) => {
+
+            // })
         }
         this.setState({ quotes });
         this.setState({
@@ -53,13 +80,19 @@ class App extends Component {
                 <Header
                     title={'The Seinfeld Chronicles'}
                     subtitle={'a quiz for a show about nothing'}
+                    gameWon={this.state.gameWon}
+                    author={this.state.pickedAuthor}
                 />
-                <Author author={this.state.pickedAuthor} />
+                <Author
+                    author={this.state.pickedAuthor}
+                    gameWon={this.state.gameWon}
+                />
                 <Quotes
                     quotes={this.state.quotes}
                     author={this.state.pickedAuthor}
                     handleChoice={this.handleChoice}
                     gameWon={this.state.gameWon}
+                    color={this.props.colors}
                 />
             </div>
         );
