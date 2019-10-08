@@ -3,7 +3,7 @@ import "hover.css";
 import "./Quotes.css";
 
 class Quotes extends Component {
-  state = { activeItem: -1 };
+  state = { activeItem: "" };
   listRef = React.createRef();
 
   handleClickItem(index) {
@@ -44,15 +44,15 @@ class Quotes extends Component {
             {this.props.quotes.map((quote, index) => (
               <li
                 key={quote.id}
-                className={`${
-                  this.state.activeItem === index ? "SingleQuote-hidden" : ""
-                } SingleQuote hvr-float`}
+                className={`SingleQuote hvr-float`}
                 style={{
-                  backgroundColor: quote.color
+                  backgroundColor: quote.color,
+                  display:
+                    this.state.activeItem === quote.id ? "none" : "absolute"
                 }}
                 onClick={() => {
                   this.props.handleChoice(quote.id);
-                  this.handleClickItem(index);
+                  this.handleClickItem(quote.id);
                 }}
                 ref={this.listRef}
               >
