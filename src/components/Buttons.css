@@ -1,0 +1,34 @@
+.Buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px 12% 0 12%;
+}
+
+.easyButton {
+    margin-right: 35px;
+}
+
+.easyButton,
+.hardButton {
+    height: 50px;
+    width: 100px;
+    cursor: pointer;
+    background: transparent;
+    border: 5px solid #fed522;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.easyButton:focus,
+.hardButton:focus {
+    outline: none;
+}
+
+.easyButton:hover,
+.hardButton:hover {
+    -webkit-box-shadow: 1em 1em 0 0 #fed522, 0 0 0 0px #fed522 inset;
+    box-shadow: 0.5em 0.5em 0 0 #fed522, 0 0 0 0px #fed522 inset;
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+}
