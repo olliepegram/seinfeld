@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import 'hover.css';
 import './Quotes.css';
 
 class Quotes extends Component {
