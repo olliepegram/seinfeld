@@ -9,7 +9,8 @@
 }
 
 .easyButton,
-.hardButton {
+.hardButton,
+.newQuotes {
     height: 50px;
     width: 100px;
     cursor: pointer;
@@ -21,12 +22,14 @@
 }
 
 .easyButton:focus,
-.hardButton:focus {
+.hardButton:focus,
+.newQuotes:focus {
     outline: none;
 }
 
 .easyButton:hover,
-.hardButton:hover {
+.hardButton:hover,
+.newQuotes:hover {
     -webkit-box-shadow: 1em 1em 0 0 #fed522, 0 0 0 0px #fed522 inset;
     box-shadow: 0.5em 0.5em 0 0 #fed522, 0 0 0 0px #fed522 inset;
     -webkit-transform: translate(-2px, -2px);

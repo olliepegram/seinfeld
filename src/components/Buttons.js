@@ -6,6 +6,12 @@ export class Buttons extends Component {
         return (
             <div className='Buttons'>
                 <button
+                    className='newQuotes'
+                    onClick={this.props.handleNewQuotesClick}
+                >
+                    New Quotes
+                </button>
+                <button
                     onClick={() => this.props.handleButtonModes('easy')}
                     className='easyButton'
                 >
@@ -15,7 +21,7 @@ export class Buttons extends Component {
                     onClick={() => this.props.handleButtonModes('hard')}
                     className='hardButton'
                 >
-                    Hard
+                    Giddy Up!
                 </button>
             </div>
         );

@@ -110,6 +110,10 @@ class App extends Component {
         }
     };
 
+    handleNewQuotesClick = () => {
+        this.setState(this.getQuotes());
+    };
+
     quotesToRender = () => {
         return (
             <Quotes
@@ -136,7 +140,10 @@ class App extends Component {
                     author={this.state.pickedAuthor}
                     gameWon={this.state.gameWon}
                 />
-                <Buttons handleButtonModes={this.handleButtonModes} />
+                <Buttons
+                    handleButtonModes={this.handleButtonModes}
+                    handleNewQuotesClick={this.handleNewQuotesClick}
+                />
                 {this.quotesToRender()}
             </div>
         );
