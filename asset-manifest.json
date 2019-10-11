@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Seinfeld-quiz/static/css/main.f4673301.chunk.css",
-    "main.js": "/Seinfeld-quiz/static/js/main.f9708381.chunk.js",
-    "main.js.map": "/Seinfeld-quiz/static/js/main.f9708381.chunk.js.map",
-    "runtime-main.js": "/Seinfeld-quiz/static/js/runtime-main.97856d12.js",
-    "runtime-main.js.map": "/Seinfeld-quiz/static/js/runtime-main.97856d12.js.map",
-    "static/js/2.e8a6dafe.chunk.js": "/Seinfeld-quiz/static/js/2.e8a6dafe.chunk.js",
-    "static/js/2.e8a6dafe.chunk.js.map": "/Seinfeld-quiz/static/js/2.e8a6dafe.chunk.js.map",
-    "index.html": "/Seinfeld-quiz/index.html",
-    "precache-manifest.5c421c586785668fdbe94b050c8d98b5.js": "/Seinfeld-quiz/precache-manifest.5c421c586785668fdbe94b050c8d98b5.js",
-    "service-worker.js": "/Seinfeld-quiz/service-worker.js",
-    "static/css/main.f4673301.chunk.css.map": "/Seinfeld-quiz/static/css/main.f4673301.chunk.css.map",
-    "static/media/App.css": "/Seinfeld-quiz/static/media/pattern-app.9aecd722.png",
-    "static/media/Quotes.css": "/Seinfeld-quiz/static/media/pattern-retro.8ba198fc.png"
+    "main.css": "/seinfeld/static/css/main.868ea76a.chunk.css",
+    "main.js": "/seinfeld/static/js/main.41a15aac.chunk.js",
+    "main.js.map": "/seinfeld/static/js/main.41a15aac.chunk.js.map",
+    "runtime-main.js": "/seinfeld/static/js/runtime-main.05cdc3ba.js",
+    "runtime-main.js.map": "/seinfeld/static/js/runtime-main.05cdc3ba.js.map",
+    "static/js/2.e8a6dafe.chunk.js": "/seinfeld/static/js/2.e8a6dafe.chunk.js",
+    "static/js/2.e8a6dafe.chunk.js.map": "/seinfeld/static/js/2.e8a6dafe.chunk.js.map",
+    "index.html": "/seinfeld/index.html",
+    "precache-manifest.3a5c596699d0ad1151fbceda615690e5.js": "/seinfeld/precache-manifest.3a5c596699d0ad1151fbceda615690e5.js",
+    "service-worker.js": "/seinfeld/service-worker.js",
+    "static/css/main.868ea76a.chunk.css.map": "/seinfeld/static/css/main.868ea76a.chunk.css.map",
+    "static/media/App.css": "/seinfeld/static/media/pattern-app.9aecd722.png",
+    "static/media/Quotes.css": "/seinfeld/static/media/pattern-retro.8ba198fc.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.97856d12.js",
+    "static/js/runtime-main.05cdc3ba.js",
     "static/js/2.e8a6dafe.chunk.js",
-    "static/css/main.f4673301.chunk.css",
-    "static/js/main.f9708381.chunk.js"
+    "static/css/main.868ea76a.chunk.css",
+    "static/js/main.41a15aac.chunk.js"
   ]
 }
