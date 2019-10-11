@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Header from "./Header";
 import Quotes from "./Quotes";
 import Author from "./Author";
+import Spinner from "./Spinner";
 import axios from "axios";
 import uuid from "uuid";
 import "./App.css";
@@ -25,7 +26,8 @@ class App extends Component {
     quotes: [],
     pickedAuthor: {},
     gameWon: false,
-    mode: "hard"
+    mode: "hard",
+    loading: false
   };
 
   async componentDidMount() {
@@ -64,6 +66,7 @@ class App extends Component {
           arr.map(mapObj => mapObj["author"]).indexOf(obj["author"]) === pos
         );
       });
+      this.setState({ loading: true });
     }
 
     this.setState({
@@ -82,6 +85,7 @@ class App extends Component {
           .sort(() => Math.random() - 0.5)
       });
     }
+    this.setState({ loading: false });
   }
 
   handleButtonModes = mode => {
@@ -109,6 +113,30 @@ class App extends Component {
     this.setState(this.getQuotes());
   };
 
+  renderQuotes = () => {
+    if (this.state.loading === true) {
+      return <Spinner />;
+    } else if (this.state.loading === false) {
+      return (
+        <React.Fragment>
+          <Author
+            author={this.state.pickedAuthor}
+            gameWon={this.state.gameWon}
+          />
+
+          <Quotes
+            quotes={this.state.quotes}
+            author={this.state.pickedAuthor}
+            handleChoice={this.handleChoice}
+            gameWon={this.state.gameWon}
+            color={this.props.colors}
+            mode={this.state.mode}
+          />
+        </React.Fragment>
+      );
+    }
+  };
+
   render() {
     return (
       <div className='App'>
@@ -120,16 +148,7 @@ class App extends Component {
           handleButtonModes={this.handleButtonModes}
           handleNewQuotesClick={this.handleNewQuotesClick}
         />
-        <Author author={this.state.pickedAuthor} gameWon={this.state.gameWon} />
-
-        <Quotes
-          quotes={this.state.quotes}
-          author={this.state.pickedAuthor}
-          handleChoice={this.handleChoice}
-          gameWon={this.state.gameWon}
-          color={this.props.colors}
-          mode={this.state.mode}
-        />
+        {this.renderQuotes()}
         <p className='builtBy'>
           This is gold,{" "}
           <a
