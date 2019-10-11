@@ -130,6 +130,17 @@ class App extends Component {
           color={this.props.colors}
           mode={this.state.mode}
         />
+        <p className='builtBy'>
+          This is gold,{" "}
+          <a
+            href='https://twitter.com/olliepegram'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            Ollie!
+          </a>{" "}
+          Gold!
+        </p>
       </div>
     );
   }

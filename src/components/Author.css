@@ -1,12 +1,13 @@
 .Author-wrap {
-    margin: 70px auto 0 auto;
-    text-align: center;
+  margin: 70px auto 0 auto;
+  text-align: center;
 }
 
 .PickedAuthor {
-    text-align: center;
-    border-bottom: 7px solid #fed522;
+  text-align: center;
+  border-bottom: 7px solid #fed522;
 
-    font-size: 30px;
-    display: inline;
+  font-size: 30px;
+  display: inline;
+  letter-spacing: 2px;
 }
