@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "325fab815aac92af81453e4d45ca8d6c",
+    "revision": "ec8bde06dbb649045dd1ce2585af0b17",
     "url": "/seinfeld/index.html"
   },
   {
