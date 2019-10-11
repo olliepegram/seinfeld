@@ -24,6 +24,9 @@ class Quotes extends Component {
                             >
                                 <h3 className='quote'>
                                     {this.props.author.quote}
+                                    <span className='quote-win-author'>
+                                        {this.props.author.author}
+                                    </span>
                                 </h3>
                                 <div className='quote-about'>
                                     <span className='quote-season'>

@@ -1,13 +1,63 @@
 .Author-wrap {
-  margin: 70px auto 0 auto;
-  text-align: center;
+    margin: 70px auto 0 auto;
+    text-align: center;
 }
 
 .PickedAuthor {
-  text-align: center;
-  border-bottom: 7px solid #fed522;
+    text-align: center;
+    border-bottom: 7px solid #fed522;
+    font-size: 30px;
+    display: inline;
+    letter-spacing: 2px;
+}
 
-  font-size: 30px;
-  display: inline;
-  letter-spacing: 2px;
+.PickedAuthorWin {
+    font-size: 25px;
+    display: inline;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.fancy-moses {
+    border-bottom: 7px solid #fed522;
+}
+
+.newQuotesWin {
+    background-image: url('../pattern-retro.png');
+    display: block;
+    margin: 3% auto;
+    -webkit-box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.75);
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 5px;
+    color: #fff;
+    border: none;
+    background: #fed522;
+    color: #333;
+}
+
+.newQuotesWin:hover {
+    -webkit-box-shadow: 0.5em 0.5em 0 0 #fed522, 0 0 0 2px #fed522 inset;
+    box-shadow: 0.5em 0.5em 0 0 #fed522, 0 0 0 2px #fed522 inset;
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+    background: transparent !important;
+    color: #333;
+}
+
+.newQuotesWin:focus {
+    outline: none;
+}
+
+@media (max-width: 440px) {
+    .PickedAuthorWin {
+        font-size: 18px;
+    }
+
+    .newQuotesWin {
+        margin-bottom: 4%;
+    }
 }
