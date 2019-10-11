@@ -12,6 +12,7 @@
     padding-right: 30px;
     flex-flow: wrap row;
     justify-content: space-around;
+    margin-bottom: -2px;
 }
 
 .newQuotes {

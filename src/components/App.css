@@ -4,6 +4,7 @@
     font-family: 'Questrial', sans-serif;
     background-color: #f4f4f4;
     background-image: url('../pattern-app.png');
+    height: 100%;
 }
 
 .builtBy {
