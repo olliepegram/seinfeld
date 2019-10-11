@@ -5,10 +5,7 @@ class Author extends Component {
     authorOrWon = (author, gameWon) => {
         if (gameWon === false) {
             return (
-                <p
-                    className='PickedAuthor'
-                    style={{ borderColor: gameWon ? author.color : '#fed522' }}
-                >
+                <p className='PickedAuthor'>
                     {author.author ? `${author.author} said what!?` : ''}
                 </p>
             );

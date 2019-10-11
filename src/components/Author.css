@@ -5,7 +5,7 @@
 
 .PickedAuthor {
     text-align: center;
-    border-bottom: 7px solid #fed522;
+    border-bottom: 7px solid rgba(254, 213, 34, 1);
     font-size: 30px;
     display: inline;
     letter-spacing: 2px;
