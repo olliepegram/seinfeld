@@ -1,37 +1,119 @@
 .Buttons {
-    display: flex;
-    justify-content: flex-end;
-    margin: 10px 12% 0 12%;
+  font-family: "Eczar", serif;
+  display: flex;
+  margin: 0 15% 0 15%;
+  justify-content: flex-end;
+  background-image: url("../pattern-retro.png");
+  padding-left: 30px;
+  padding-right: 30px;
+  flex-flow: wrap row;
+  justify-content: space-around;
+}
+
+.newQuotes {
+  margin-right: auto;
 }
 
 .easyButton {
-    margin-right: 35px;
+  margin-right: 20px;
 }
 
 .easyButton,
 .hardButton,
 .newQuotes {
-    height: 50px;
-    width: 100px;
-    cursor: pointer;
-    background: transparent;
-    border: 5px solid #fed522;
-    font-size: 18px;
-    text-decoration: none;
-    transition: all 0.2s ease;
+  cursor: pointer;
+  border-bottom: 5px solid #fed522 !important;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+  bottom: 0;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+
+.easySpan,
+.hardSpan,
+.quotesSpan {
+  padding: 0 20px 7px 20px;
 }
 
 .easyButton:focus,
 .hardButton:focus,
 .newQuotes:focus {
-    outline: none;
+  outline: none;
 }
 
-.easyButton:hover,
-.hardButton:hover,
-.newQuotes:hover {
-    -webkit-box-shadow: 1em 1em 0 0 #fed522, 0 0 0 0px #fed522 inset;
-    box-shadow: 0.5em 0.5em 0 0 #fed522, 0 0 0 0px #fed522 inset;
-    -webkit-transform: translate(-2px, -2px);
-    transform: translate(-2px, -2px);
+.hvr-float {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-float:hover,
+.hvr-float:focus,
+.hvr-float:active {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+/* MEDIA */
+@media (max-width: 1168px) {
+  .easyButton,
+  .hardButton,
+  .newQuotes {
+    font-size: 16px;
+    margin: auto;
+  }
+
+  .easySpan,
+  .hardSpan,
+  .quotesSpan {
+    padding: 0 10px 7px 10px;
+  }
+
+  .Buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 902px) {
+  .easyButton,
+  .hardButton,
+  .newQuotes {
+    border: none;
+    letter-spacing: 1px;
+    background: #fed522;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .easySpan,
+  .hardSpan,
+  .quotesSpan {
+    padding: 8px 2px 4px 2px;
+    width: 120px;
+  }
+}
+
+@media (max-width: 777px) {
+  .Buttons {
+    flex-direction: column;
+  }
+  .easyButton,
+  .hardButton,
+  .newQuotes {
+    margin: 10px 0 10px 0;
+  }
 }
