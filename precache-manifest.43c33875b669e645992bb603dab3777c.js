@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b51c41d103a816956d807abe2acff2cc",
+    "revision": "d25eb181d0e053298f9c90d27fa87a53",
     "url": "/seinfeld/index.html"
   },
   {
-    "revision": "b01b396ddbe08b763032",
-    "url": "/seinfeld/static/css/main.868ea76a.chunk.css"
+    "revision": "d6bf107ec3d6c9172741",
+    "url": "/seinfeld/static/css/main.e9426f71.chunk.css"
   },
   {
     "revision": "f40b32b7c8fed0e4aef7",
     "url": "/seinfeld/static/js/2.e8a6dafe.chunk.js"
   },
   {
-    "revision": "b01b396ddbe08b763032",
-    "url": "/seinfeld/static/js/main.41a15aac.chunk.js"
+    "revision": "d6bf107ec3d6c9172741",
+    "url": "/seinfeld/static/js/main.65daae1a.chunk.js"
   },
   {
     "revision": "ef416e178ed6a981a3b5",

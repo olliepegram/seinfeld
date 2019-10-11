@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/seinfeld/static/css/main.868ea76a.chunk.css",
-    "main.js": "/seinfeld/static/js/main.41a15aac.chunk.js",
-    "main.js.map": "/seinfeld/static/js/main.41a15aac.chunk.js.map",
+    "main.css": "/seinfeld/static/css/main.e9426f71.chunk.css",
+    "main.js": "/seinfeld/static/js/main.65daae1a.chunk.js",
+    "main.js.map": "/seinfeld/static/js/main.65daae1a.chunk.js.map",
     "runtime-main.js": "/seinfeld/static/js/runtime-main.05cdc3ba.js",
     "runtime-main.js.map": "/seinfeld/static/js/runtime-main.05cdc3ba.js.map",
     "static/js/2.e8a6dafe.chunk.js": "/seinfeld/static/js/2.e8a6dafe.chunk.js",
     "static/js/2.e8a6dafe.chunk.js.map": "/seinfeld/static/js/2.e8a6dafe.chunk.js.map",
     "index.html": "/seinfeld/index.html",
-    "precache-manifest.3a5c596699d0ad1151fbceda615690e5.js": "/seinfeld/precache-manifest.3a5c596699d0ad1151fbceda615690e5.js",
+    "precache-manifest.43c33875b669e645992bb603dab3777c.js": "/seinfeld/precache-manifest.43c33875b669e645992bb603dab3777c.js",
     "service-worker.js": "/seinfeld/service-worker.js",
-    "static/css/main.868ea76a.chunk.css.map": "/seinfeld/static/css/main.868ea76a.chunk.css.map",
+    "static/css/main.e9426f71.chunk.css.map": "/seinfeld/static/css/main.e9426f71.chunk.css.map",
     "static/media/App.css": "/seinfeld/static/media/pattern-app.9aecd722.png",
-    "static/media/Quotes.css": "/seinfeld/static/media/pattern-retro.8ba198fc.png"
+    "static/media/Author.css": "/seinfeld/static/media/pattern-retro.8ba198fc.png"
   },
   "entrypoints": [
     "static/js/runtime-main.05cdc3ba.js",
     "static/js/2.e8a6dafe.chunk.js",
-    "static/css/main.868ea76a.chunk.css",
-    "static/js/main.41a15aac.chunk.js"
+    "static/css/main.e9426f71.chunk.css",
+    "static/js/main.65daae1a.chunk.js"
   ]
 }
