@@ -3,7 +3,6 @@ import './Quotes.css';
 
 class Quotes extends Component {
     state = { activeItem: '' };
-    listRef = React.createRef();
 
     handleClickItem(index) {
         this.setState({ activeItem: index });
@@ -60,7 +59,6 @@ class Quotes extends Component {
                                     this.props.handleChoice(quote.id);
                                     this.handleClickItem(quote.id);
                                 }}
-                                ref={this.listRef}
                             >
                                 <h3 className='quote'>{quote.quote}</h3>
                                 <div className='quote-about'>

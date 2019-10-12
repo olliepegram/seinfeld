@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './Author.css';
 
 class Author extends Component {
+    listRef = React.createRef();
+
     authorOrWon = (author, gameWon) => {
         if (gameWon === false) {
             return (
@@ -22,6 +24,7 @@ class Author extends Component {
                         <span className='fancy-moses'>Sweet fancy moses</span>,
                         you won!
                     </p>
+                    {this.listRef.current.scrollTo(-100, -100)}
                 </React.Fragment>
             );
         }
@@ -30,7 +33,7 @@ class Author extends Component {
     render() {
         const { author, gameWon } = this.props;
         return (
-            <div className='Author-wrap'>
+            <div className='Author-wrap' ref={this.listRef}>
                 {this.authorOrWon(author, gameWon)}
             </div>
         );
